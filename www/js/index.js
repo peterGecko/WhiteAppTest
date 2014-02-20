@@ -59,9 +59,6 @@ var app = {
 		}
 		
 		alert("onDeviceReady3");
-		//trackPage();
-		
-		
-		
+		gaPlugin.trackPage( nativePluginResultHandler, nativePluginErrorHandler, "/index");
     }
 };
