@@ -43,28 +43,6 @@
         var myAnalyticsAccount = "UA-25926854-4";
         var gaPlugin;
 
-        // Wait for PhoneGap to load
-        document.addEventListener("deviceready", onDeviceReady(), false);
-
-        // PhoneGap is ready
-
-        function onDeviceReady() {
-			// Initializing Google Analytics
-			alert(window.plugins);
-			gaPlugin = window.plugins.gaPlugin;
-			alert("onDeviceReady2");
-			try{
-				
-				gaPlugin.init(nativePluginResultHandler, nativePluginErrorHandler, "UA-25926854-4", 10);
-			
-			}catch(e){
-				alert(e)
-			}
-			
-			alert("onDeviceReady3");
-			trackPage();
-        }
-
         // Google Analytics Error Handlyer
         function nativePluginErrorHandler(result) {
         	alert('errorHandler: '+result);
