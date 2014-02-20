@@ -27,23 +27,6 @@ var app = {
     // 'load', 'deviceready', 'offline', and 'online'.
     bindEvents: function() {
         document.addEventListener('deviceready', this.onDeviceReady, false);
-		
-		// Initializing Google Analytics
-		alert(window.plugins);
-		gaPlugin = window.plugins.gaPlugin;
-		alert("onDeviceReady2");
-		try{
-			
-			gaPlugin.init(nativePluginResultHandler, nativePluginErrorHandler, "UA-25926854-4", 10);
-		
-		}catch(e){
-			alert(e)
-		}
-		
-		alert("onDeviceReady3");
-		//trackPage();
-		
-		
     },
     // deviceready Event Handler
     //
@@ -63,6 +46,20 @@ var app = {
 
         console.log('Received Event: ' + id);
 		
+		// Initializing Google Analytics
+		alert(window.plugins);
+		gaPlugin = window.plugins.gaPlugin;
+		alert("onDeviceReady2");
+		try{
+			
+			gaPlugin.init(nativePluginResultHandler, nativePluginErrorHandler, "UA-25926854-4", 10);
+		
+		}catch(e){
+			alert(e)
+		}
+		
+		alert("onDeviceReady3");
+		//trackPage();
 		
 		
 		
