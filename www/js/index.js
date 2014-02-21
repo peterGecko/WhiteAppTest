@@ -46,19 +46,9 @@ var app = {
 
         console.log('Received Event: ' + id);
 		
-		// Initializing Google Analytics
-		alert(window.plugins);
-		gaPlugin = window.plugins.gaPlugin;
-		alert("onDeviceReady2");
-		try{
-			
-			gaPlugin.init(nativePluginResultHandler, nativePluginErrorHandler, "UA-25926854-4", 10);
-		
-		}catch(e){
-			alert(e)
-		}
-		
-		alert("onDeviceReady3");
+		// Initializing Google Analytics 
+		gaPlugin = window.plugins.gaPlugin;  
+		gaPlugin.init(nativePluginResultHandler, nativePluginErrorHandler, "UA-xyz", 10);
 		gaPlugin.trackPage( nativePluginResultHandler, nativePluginErrorHandler, "/index");
     }
 };
