@@ -40,9 +40,9 @@
         <script type="text/javascript" charset="utf-8"> 
 
         // Setting up Google Analytics variables
-        var myAnalyticsAccount = "UA-25926854-4";
+        var myAnalyticsAccount = "UA-xyz";
         var gaPlugin;
-
+		
         // Google Analytics Error Handlyer
         function nativePluginErrorHandler(result) {
         	alert('errorHandler: '+result);
@@ -53,18 +53,6 @@
 			alert('successHandler: '+result);
         }    
 		
-
-        // Google Analytics Success Handler     
-        function trackPage() {
-			//alert("successHandler1");
-			gaPlugin.trackPage( openSuccessHandler("App opening tracked"), errorHandler("trackPage Failed"), "/index");
-			//gaPlugin.trackEvent(openSuccessHandler(), errorHandler("trackEventFailed"), "App", "Open", "App","app opned");
-        }    
-		
-		 function openSuccessHandler(message) {
-        	//alert(message);
-        }   
- 
 	</script> 
         
         <script type="text/javascript" src="js/index.js"></script>

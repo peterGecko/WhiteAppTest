@@ -48,7 +48,7 @@ var app = {
 		
 		// Initializing Google Analytics 
 		gaPlugin = window.plugins.gaPlugin;  
-		gaPlugin.init(nativePluginResultHandler, nativePluginErrorHandler, "UA-xyz", 10);
+		gaPlugin.init(nativePluginResultHandler, nativePluginErrorHandler, myAnalyticsAccount, 10);
 		gaPlugin.trackPage( nativePluginResultHandler, nativePluginErrorHandler, "/index");
     }
 };
